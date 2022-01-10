@@ -7,7 +7,7 @@ const rl = createInterface({
 
 const question = (): Promise<null> =>
   new Promise(() => {
-      rl.question('Write > ', (answer: string) => {
+      rl.question('For calculation > ', (answer: string) => {
           console.log(`Result: ${answer}`)
       })
   })
