@@ -1,4 +1,5 @@
 import { createInterface } from 'readline'
+import { prepareInput } from '../utils/prepare/prepareInput'
 
 const rl = createInterface({
     input: process.stdin,
@@ -6,16 +7,22 @@ const rl = createInterface({
 })
 
 const question = (): Promise<null> =>
-  new Promise(() => {
-      rl.question('For calculation > ', (answer: string) => {
-          console.log(`Result: ${answer}`)
-      })
-  })
+    new Promise((resolve) => {
+        rl.question('For calculation > ', (answer: string) => {
+            const result = prepareInput(answer)
+
+            if (result) {
+                console.log(`Result: ${result}`)
+            }
+
+            resolve(null)
+        })
+    })
 
 async function app(): Promise<null> {
-  while (true) {
-    await question()
-  }
+    while (true) {
+        await question()
+    }
 }
 
 app()
