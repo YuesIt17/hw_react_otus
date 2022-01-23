@@ -1,9 +1,7 @@
-import _ from 'lodash'
-
 function helloWebpack() {
     const element =
         document.getElementById('root') || document.createElement('div')
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ')
+    element.innerHTML = 'Hello, webpack'
 
     return element
 }

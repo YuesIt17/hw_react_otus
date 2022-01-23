@@ -1,12 +1,10 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-const isProduction = process.env.NODE_ENV == "production";
-
 const config = {
   entry: "./src/index.tsx",
   resolve: {
-    extensions: [".js", ".jsx", ".ts", ".tsx", ".json"],
+    extensions: [".js", ".ts", ".tsx", ".json"],
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -31,11 +29,7 @@ const config = {
   },
 };
 
-module.exports = () => {
-  if (isProduction) {
-    config.mode = "production";
-  } else {
-    config.mode = "development";
-  }
+module.exports = (env, argv) => {
+  config.mode = argv.mode || process.env.NODE_ENV;
   return config;
 };
