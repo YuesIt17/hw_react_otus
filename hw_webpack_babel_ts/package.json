@@ -4,12 +4,12 @@
   "description": "My webpack project",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode=production --node-env=production",
+    "build": "webpack --node-env=production",
+    "build:dev": "webpack --node-env=development",
     "calc": "ts-node src/app",
     "lint": "eslint \"src/**/*.{js,ts,tsx}\" --fix",
     "test": "jest",
     "check": "npm test && npm run lint",
-    "build:dev": "webpack --mode=development --node-env=development",
     "watch": "webpack --watch",
     "serve": "webpack serve"
   },

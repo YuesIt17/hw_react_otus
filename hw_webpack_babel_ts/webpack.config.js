@@ -29,7 +29,4 @@ const config = {
   },
 };
 
-module.exports = (env, argv) => {
-  config.mode = argv.mode || process.env.NODE_ENV;
-  return config;
-};
+module.exports = config;
