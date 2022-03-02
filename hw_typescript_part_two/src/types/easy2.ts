@@ -3,29 +3,29 @@ type FIXME = any;
 
 type Order =
   | {
-      state: "initial";
+      state: 'initial';
       sum: number;
     }
   | {
-      state: "inWork";
+      state: 'inWork';
       sum: number;
       workerId: number;
     }
   | {
-      state: "buyingSupplies";
+      state: 'buyingSupplies';
       sum: number;
       workerId: number;
       suppliesSum: number;
     }
   | {
-      state: "producing";
+      state: 'producing';
       sum: number;
       workerId: number;
       suppliesSum: number;
       produceEstimate: Date;
     }
   | {
-      state: "fullfilled";
+      state: 'fullfilled';
       sum: number;
       workerId: number;
       suppliesSum: number;
