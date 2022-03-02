@@ -1,6 +1,6 @@
 import {getUserOrderStates, OrderState} from './easy1';
 
-describe('test cases of order states', () => {
+describe('easy1 test cases of order states', () => {
   test('check get order states', () => {
     const orderStates = [
       'buyingSupplies',
