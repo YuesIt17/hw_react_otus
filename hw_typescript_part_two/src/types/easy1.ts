@@ -1,6 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-type FIXME = any;
-
 const orderStates = [
   'initial',
   'inWork',
@@ -9,7 +6,9 @@ const orderStates = [
   'fullfilled',
 ] as const;
 
-type OrderState = typeof orderStates[number];
+export type OrderState = typeof orderStates[number];
+
+type FIXME = Omit<OrderState, 'buyingSupplies' | 'producing'>[];
 
 export const getUserOrderStates = (orderStates: OrderState[]): FIXME => {
   const filteredStates = [] as FIXME;
