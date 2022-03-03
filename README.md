@@ -36,3 +36,9 @@ to bundle your application
         - echo > .prettierignore
     - npm install --save-dev eslint-config-prettier
     https://github.com/prettier/prettier/issues/8815
+
+7. Install husky https://typicode.github.io/husky/#/?id=install
+    - npm install husky --save-dev
+    - npx husky install
+    - npm set-script prepare "husky install"
+    - npx husky add .husky/pre-commit "npm test"

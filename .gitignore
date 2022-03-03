@@ -1,4 +1,5 @@
 .history
 .vscode
+.husky
 node_modules
 dist
