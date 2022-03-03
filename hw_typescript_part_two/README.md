@@ -1,15 +1,10 @@
-# 🚀 Welcome to your new awesome project!
+# Project typescript part 2
 
-This project has been created using **webpack-cli**, you can now run
+Run build: 
+  - yarn build
 
-```
-npm run build
-```
+Run test:
+  - yarn test
 
-or
-
-```
-yarn build
-```
-
-yarn test
+Run lint: 
+  - yarn lint
