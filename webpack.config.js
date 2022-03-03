@@ -2,12 +2,12 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const config = {
-  entry: "./hw_webpack_babel_ts/src/index.tsx",
+  entry: "./src/hw_webpack_babel_ts/index.tsx",
   resolve: {
     extensions: [".js", ".ts", ".tsx", ".json"],
   },
   output: {
-    path: path.resolve(__dirname, "./hw_webpack_babel_ts/dist"),
+    path: path.resolve(__dirname, "./src/hw_webpack_babel_ts/dist"),
   },
   devServer: {
     open: true,
@@ -15,7 +15,7 @@ const config = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./hw_webpack_babel_ts/src/index.html",
+      template: "./src/hw_webpack_babel_ts/index.html",
     }),
   ],
   module: {
