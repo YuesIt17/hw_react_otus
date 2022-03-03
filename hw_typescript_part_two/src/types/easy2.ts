@@ -1,5 +1,4 @@
-type OrderState = Pick<Order, 'state'>;
-type FIXME = OrderState['state'];
+type FIXME = Order['state'];
 
 export type Order =
   | {

@@ -11,3 +11,5 @@ or
 ```
 yarn build
 ```
+
+yarn test
