@@ -11,13 +11,8 @@
     "test": "jest",
     "check": "npm test && npm run lint",
     "watch": "webpack --watch",
-    "serve": "webpack serve"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run check",
-      "pre-push": "npm run check"
-    }
+    "serve": "webpack serve",
+    "prepare": "husky install"
   },
   "author": "Evgeny_Y",
   "license": "ISC",
